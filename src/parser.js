@@ -3,7 +3,7 @@ import path from 'path'
 
 const parsers = {
   '.json': JSON.parse,
-};
+}
 
 export default (filepath) => {
   const absolutePath = path.resolve(process.cwd(), filepath)
@@ -11,4 +11,4 @@ export default (filepath) => {
   const extension = path.extname(filepath).toLowerCase()
   const parse = parsers[extension]
   return parse(fileContent)
-};
+}
