@@ -32,7 +32,7 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.organization=Box781
+            -Dsonar.organization=box781
             -Dsonar.projectKey=Box781_frontend-project-46
             -Dsonar.sources=.
             -Dsonar.tests=__tests__
