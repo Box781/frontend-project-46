@@ -15,7 +15,11 @@
   "type": "module",
   "main": "gendiff",
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "node"
   },
   "dependencies": {
     "commander": "^14.0.3",
