@@ -15,7 +15,9 @@
   "type": "module",
   "main": "gendiff",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test-coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "lint": "eslint ."
   },
   "jest": {
     "transform": {},
