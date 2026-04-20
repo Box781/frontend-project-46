@@ -8,3 +8,5 @@ https://asciinema.org/a/NanVoLdMu1Y3h1sT - формат json
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Box781_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Box781_frontend-project-46)
 
 https://asciinema.org/a/eivFDP1riB7PDH3b - формат yml
+
+https://asciinema.org/a/NanVoLdMu1Y3h1sT - сравнение вложенных (шаг 7)
