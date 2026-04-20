@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import stylish from './formatters/stylish.js'
+import Format from './formatters/index.js'
 
 const diff = (data1, data2) => {
   const keys = _.union(_.keys(data1), _.keys(data2))
@@ -34,9 +34,9 @@ const diff = (data1, data2) => {
   })
 }
 
-const res = (data1, data2) => {
+const res = (data1, data2, format = 'stylish') => {
   const ast = diff(data1, data2)
-  return stylish(ast)
+  return Format(ast, format)
 }
 
 export default res

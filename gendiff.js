@@ -16,7 +16,8 @@ program
   .action((filepath1, filepath2) => {
     const data1 = parseFile(filepath1)
     const data2 = parseFile(filepath2)
-    const dif = diff(data1, data2)
+    const { format } = program.opts()
+    const dif = diff(data1, data2, format)
     console.log(dif)
   })
 program.parse()
