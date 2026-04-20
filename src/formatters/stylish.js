@@ -38,9 +38,9 @@ const stylish = (ast, depth = 1) => {
       default:
         throw new Error(`Unknown type: ${type}`)
     }
-  });
+  })
 
-  return lines.join('\n');
-};
+  return lines.join('\n')
+}
 
-export default (ast) => `{\n${stylish(ast)}\n}`;
+export default ast => `{\n${stylish(ast)}\n}`
