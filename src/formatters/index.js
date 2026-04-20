@@ -1,12 +1,14 @@
 import stylish from './stylish.js'
 import plain from './plain.js'
+import json from './json.js'
 
 const formatters = {
   stylish,
   plain,
+  json,
 }
 
-export default (ast, formatName) => {
-  const formatter = formatters[formatName]
+export default (ast, format) => {
+  const formatter = formatters[format]
   return formatter(ast)
 }

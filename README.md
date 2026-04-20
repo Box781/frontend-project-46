@@ -12,3 +12,5 @@ https://asciinema.org/a/eivFDP1riB7PDH3b - формат yml
 https://asciinema.org/a/NanVoLdMu1Y3h1sT - сравнение вложенных (шаг 7)
 
 https://asciinema.org/a/bNUffcvXNHOHz8XC - второй форматер (шаг 8)
+
+https://asciinema.org/a/FZxrsAZ2Ucu3jRPo - третий форматер (шаг 9)

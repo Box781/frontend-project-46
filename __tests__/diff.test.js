@@ -89,3 +89,17 @@ test('Сравнение вложенных YAML', () => {
   const file2 = parseFile(getFixturePath('file4.yml'))
   expect(diff(file1, file2)).toBe(expected)
 })
+
+test('сравнение json для JSON', () => {
+  const file1 = parseFile(getFixturePath('file3.json'))
+  const file2 = parseFile(getFixturePath('file4.json'))
+  const result = diff(file1, file2, 'json')
+  expect(JSON.parse(result)).toEqual(JSON.parse(result))
+})
+
+test('сравнение json для yaml', () => {
+  const file1 = parseFile(getFixturePath('file3.yml'))
+  const file2 = parseFile(getFixturePath('file4.yml'))
+  const result = diff(file1, file2, 'json')
+  expect(JSON.parse(result)).toEqual(JSON.parse(result))
+})
