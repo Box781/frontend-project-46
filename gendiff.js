@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander'
-import parseFile from './src/parser.js'
-import diff from './src/diff.js'
+import genDiff from './src/index.js'
 
 const program = new Command()
 
@@ -14,10 +13,8 @@ program
   .option('-f, --format [type]', 'output format', 'stylish')
   .helpOption('-h, --help', 'display help for command')
   .action((filepath1, filepath2) => {
-    const data1 = parseFile(filepath1)
-    const data2 = parseFile(filepath2)
     const { format } = program.opts()
-    const dif = diff(data1, data2, format)
-    console.log(dif)
+    console.log(genDiff(filepath1, filepath2, format))
   })
-program.parse()
+
+program.parse(process.argv)
