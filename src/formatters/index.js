@@ -2,13 +2,15 @@ import stylish from './stylish.js'
 import plain from './plain.js'
 import json from './json.js'
 
-const formatters = {
-  stylish,
-  plain,
-  json,
-}
-
 export default (ast, format) => {
-  const formatter = formatters[format]
-  return formatter(ast)
+  switch (format) {
+    case 'stylish':
+      return stylish(ast)
+    case 'plain':
+      return plain(ast)
+    case 'json':
+      return json(ast)
+    default:
+      throw new Error('Формат не поддерживается')
+  }
 }
